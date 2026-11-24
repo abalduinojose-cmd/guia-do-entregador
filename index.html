@@ -77,10 +77,12 @@ section{padding:96px 0;position:relative}
   repeating-linear-gradient(115deg,transparent 0 46px,rgba(255,255,255,.022) 46px 48px)}
 .hero-in{display:flex;flex-direction:column;align-items:center;max-width:880px}
 .logo{width:148px;height:148px;border-radius:50%;margin-bottom:18px;box-shadow:0 0 0 6px rgba(255,214,10,.18),0 24px 40px -14px rgba(0,0,0,.6)}
-.pill{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(90deg,rgba(255,214,10,.16),rgba(255,255,255,.06));border:1px solid rgba(255,214,10,.45);padding:6px 16px 6px 6px;border-radius:99px;font-size:14px;font-weight:700;margin-bottom:20px;white-space:nowrap;box-shadow:0 10px 26px -14px rgba(255,214,10,.6)}
-.pill em{font-style:normal;display:inline-flex;align-items:center;gap:5px;background:var(--y);color:var(--navy);font:900 11.5px/1 var(--display);padding:7px 11px 7px 9px;border-radius:99px;letter-spacing:.06em}
-.pill em svg{width:13px;height:13px}
-.pill .dot{width:8px;height:8px;border-radius:50%;background:#3DDC84;box-shadow:0 0 0 4px rgba(61,220,132,.2);flex:none}
+.pill{display:inline-flex;align-items:center;gap:12px;background:rgba(9,18,56,.55);border:1.5px solid rgba(255,214,10,.55);padding:5px 20px 5px 5px;border-radius:99px;margin-bottom:22px;white-space:nowrap;box-shadow:0 0 0 5px rgba(255,214,10,.08),0 14px 30px -16px rgba(255,214,10,.7)}
+.pill .ics{display:flex}
+.pill .ic{width:34px;height:34px;border-radius:50%;background:var(--y);color:var(--navy);display:grid;place-items:center;border:2px solid var(--navy);flex:none}
+.pill .ic+.ic{margin-left:-9px;background:#fff}
+.pill .ic svg{width:20px;height:20px}
+.pill em{font-style:normal;font:900 15px/1 var(--display);letter-spacing:.16em;color:var(--y)}
 .hero h1{font:900 clamp(36px,5.6vw,68px)/1 var(--display);letter-spacing:-.03em;text-wrap:balance;margin-bottom:20px}
 .hero h1 .money{color:var(--y);white-space:nowrap;display:inline-block;position:relative}
 .hero h1 .money::after{content:"";position:absolute;left:0;right:0;bottom:-.06em;height:.09em;border-radius:99px;background:var(--y);opacity:.5}
@@ -421,8 +423,6 @@ footer b{color:#fff;font-family:var(--display)}
   .cta-hero{padding:12px 12px 12px 22px;justify-content:space-between}
   .cta-hero b{font-size:16.5px}
   .cta-hero{gap:12px}
-  .pill{font-size:13px;padding:5px 14px 5px 5px;gap:8px}
-  .pill em{font-size:10.5px;padding:7px 9px 7px 8px}
   .price{text-align:center}
   .cta{font-size:16px}
   .errs{grid-template-columns:1fr}
@@ -436,7 +436,6 @@ footer b{color:#fff;font-family:var(--display)}
   .kit-main ul{grid-template-columns:1fr}
   .kit-main .cv{width:190px}
 }
-@media (max-width:400px){.pill .xl{display:none}}
 @media (min-width:981px){.mbar{display:none}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.cta::after{display:none}}
 </style>
@@ -471,7 +470,7 @@ footer b{color:#fff;font-family:var(--display)}
 <header class="hero">
   <div class="wrap hero-in">
     <img class="logo" data-rv="pop" data-k="logo" alt="Guia do Entregador do Mercado Livre" width="480" height="480" fetchpriority="high">
-    <span class="pill" data-rv><em><svg><use href="#bolt"/></svg>OPORTUNIDADE</em><span class="dot" aria-hidden="true"></span>Pagamento toda semana<span class="xl">&nbsp;na sua conta</span></span>
+    <span class="pill" data-rv><span class="ics" aria-hidden="true"><span class="ic"><svg><use href="#car"/></svg></span><span class="ic"><svg><use href="#moto"/></svg></span></span><em>OPORTUNIDADE</em></span>
     <h1 data-rv>Ganhe até <span class="money">R$ 6.000/mês</span> fazendo entregas para o Mercado Livre<sup>*</sup></h1>
     <p class="sub" data-rv>Com o <b>Guia do Entregador</b> e o <mark>Checklist de Saída pronto</mark>, você se cadastra sem erro, é aprovado e faz a sua primeira rota com lucro, <b>de carro ou de moto</b>.</p>
     <div class="buy" data-rv>
